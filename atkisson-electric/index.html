@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atkisson Electric | Hope Valley, RI Electrician</title>
+<meta name="description" content="Atkisson Electric — family-owned residential & commercial electrical contractor in Hope Valley, RI. Call or text (401) 539-7003.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23111111'/%3E%3Ctext x='50' y='70' font-size='58' font-family='Arial' font-weight='900' fill='%23ffcc00' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black: #111111;
+    --charcoal: #1c1c1c;
+    --paper: #fbf9f4;
+    --panel: #ffffff;
+    --yellow: #ffcc00;
+    --yellow-deep: #e0a800;
+    --ink: #1a1a1a;
+    --ink-soft: #5c5648;
+    --line: #e9e2d0;
+    --shadow: 0 20px 50px -22px rgba(20,16,4,0.35);
+    --radius: 20px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    padding-bottom:76px;
+  }
+  h1,h2,h3,.logo{font-family:'Space Grotesk',sans-serif;}
+  a{color:inherit;}
+  img,svg{max-width:100%;display:block;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- nav ---------- */
+  header{
+    position:sticky;top:0;z-index:40;
+    background:var(--black);
+    border-bottom:3px solid var(--yellow);
+  }
+  nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1140px;margin:0 auto;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;letter-spacing:-0.02em;color:#fff;}
+  .logo-mark{width:38px;height:38px;border-radius:9px;background:var(--yellow);display:flex;align-items:center;justify-content:center;color:var(--black);font-weight:800;}
+  .nav-links{display:flex;gap:30px;font-weight:600;font-size:0.95rem;list-style:none;margin:0;padding:0;}
+  .nav-links a{text-decoration:none;color:#d8d3c4;}
+  .nav-links a:hover{color:var(--yellow);}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 22px;border-radius:10px;font-weight:800;font-size:0.95rem;
+    text-decoration:none;cursor:pointer;border:none;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary{background:var(--yellow);color:var(--black);box-shadow:0 10px 20px -8px rgba(224,168,0,0.6);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 26px -8px rgba(224,168,0,0.7);}
+  @media(max-width:760px){.nav-links{display:none;}}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:var(--black);
+    color:#fff;
+    padding:80px 0 90px;
+    background-image:
+      linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+      repeating-linear-gradient(135deg, rgba(255,204,0,0.06) 0 18px, transparent 18px 36px);
+  }
+  .hero-grid{max-width:700px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--yellow);color:var(--black);
+    padding:8px 16px;border-radius:999px;font-size:0.82rem;font-weight:800;
+    margin-bottom:22px;letter-spacing:0.02em;
+  }
+  .hero h1{font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.08;letter-spacing:-0.02em;margin:0 0 20px;}
+  .hero h1 .accent{color:var(--yellow);}
+  .hero p.lead{font-size:1.1rem;color:#cfc9b8;max-width:520px;margin:0 auto 32px;line-height:1.6;}
+  .hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid #45412f;}
+  .btn-ghost:hover{border-color:var(--yellow);color:var(--yellow);}
+  .hero-stats{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap;justify-content:center;}
+  .hero-stats div{text-align:center;}
+  .hero-stats strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.6rem;color:var(--yellow);}
+  .hero-stats span{font-size:0.82rem;color:#a89f88;}
+
+  /* ---------- section shell ---------- */
+  section{padding:80px 0;}
+  .section-head{max-width:620px;margin:0 auto 50px;text-align:center;}
+  .section-head .kicker{display:inline-block;font-weight:800;font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--yellow-deep);margin-bottom:10px;}
+  .section-head h2{font-size:clamp(1.8rem,3.5vw,2.4rem);letter-spacing:-0.02em;margin:0 0 12px;}
+  .section-head p{color:var(--ink-soft);font-size:1.02rem;line-height:1.6;margin:0;}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- services ---------- */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  @media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:600px){.services-grid{grid-template-columns:1fr;}}
+  .svc-card{
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    padding:28px;box-shadow:var(--shadow);
+  }
+  .svc-icon{width:50px;height:50px;border-radius:12px;background:var(--black);display:flex;align-items:center;justify-content:center;color:var(--yellow);font-size:1.3rem;margin-bottom:16px;}
+  .svc-card h3{font-size:1.15rem;margin:0 0 8px;letter-spacing:-0.01em;}
+  .svc-card p{color:var(--ink-soft);line-height:1.55;margin:0;font-size:0.95rem;}
+
+  /* ---------- reviews ---------- */
+  #reviews{background:var(--charcoal);color:#fff;}
+  #reviews .section-head p{color:#b8b2a0;}
+  #reviews .kicker{color:var(--yellow);}
+  .reviews-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  @media(max-width:760px){.reviews-grid{grid-template-columns:1fr;}}
+  .review-card{
+    background:#242220;border:1px solid #3a362b;border-radius:var(--radius);padding:26px;
+  }
+  .stars{color:var(--yellow);letter-spacing:2px;margin-bottom:12px;font-size:0.95rem;}
+  .review-card p{line-height:1.65;color:#e7e2d2;margin:0 0 16px;font-size:0.98rem;}
+  .review-meta{display:flex;justify-content:space-between;align-items:center;font-size:0.85rem;color:#a89f88;font-weight:600;}
+  .review-meta .src{color:#6f6852;font-weight:500;}
+
+  /* ---------- about / founder ---------- */
+  #about{background:var(--paper);}
+  .about-grid{display:flex;gap:48px;align-items:center;flex-wrap:wrap;}
+  .about-grid > div{flex:1;min-width:280px;}
+  .about-badge{
+    width:60px;height:60px;border-radius:14px;background:var(--yellow);
+    display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:18px;
+  }
+  #about h2{font-size:clamp(1.7rem,3.2vw,2.2rem);letter-spacing:-0.02em;margin:0 0 16px;}
+  #about p{color:var(--ink-soft);line-height:1.7;font-size:1.02rem;margin:0 0 14px;}
+
+  /* ---------- CTA banner ---------- */
+  .cta-banner{
+    background:var(--yellow);
+    border-radius:28px;padding:56px 40px;color:var(--black);text-align:center;
+  }
+  .cta-banner h2{font-size:clamp(1.7rem,4vw,2.3rem);margin:0 0 12px;}
+  .cta-banner p{max-width:480px;margin:0 auto 26px;color:#3a2f00;font-size:1.02rem;line-height:1.6;}
+  .phone-big{
+    display:inline-flex;align-items:center;gap:12px;background:var(--black);color:#fff;
+    font-family:'Space Grotesk',sans-serif;font-weight:800;font-size:clamp(1.3rem,3vw,1.8rem);
+    padding:18px 32px;border-radius:12px;text-decoration:none;
+    transition:transform .15s ease;
+  }
+  .phone-big:hover{transform:translateY(-2px);}
+  .cta-sub{margin-top:16px;font-size:0.85rem;color:#5c4d00;}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--black);color:#fff;padding:56px 0 40px;margin-top:0;}
+  .footer-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:36px;margin-bottom:36px;}
+  .footer-brand p{color:#a89f88;max-width:300px;line-height:1.6;font-size:0.9rem;margin-top:14px;}
+  .footer-col h5{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.08em;color:#8a8168;margin:0 0 14px;}
+  .footer-col a, .footer-col p{display:block;color:#e7e2d2;text-decoration:none;font-size:0.95rem;margin-bottom:8px;line-height:1.5;}
+  .footer-col a:hover{color:var(--yellow);}
+  .footer-bottom{border-top:1px solid #2c2a24;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:0.82rem;color:#8a8168;}
+
+  /* ---------- sticky call bar ---------- */
+  .call-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:var(--black);border-top:3px solid var(--yellow);
+    color:#fff;padding:14px 20px;display:flex;align-items:center;justify-content:center;gap:12px;
+  }
+  .call-bar a{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;font-family:'Space Grotesk',sans-serif;font-size:1.02rem;}
+  .call-bar .ring{width:30px;height:30px;border-radius:50%;background:var(--yellow);color:var(--black);display:flex;align-items:center;justify-content:center;}
+
+  ::selection{background:var(--yellow);color:var(--black);}
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav>
+    <div class="logo"><span class="logo-mark">A</span> Atkisson Electric</div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="tel:+14015397003">Call Now</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="eyebrow">⚡ Hope Valley, RI</div>
+    <h1>Honest electrical work, <span class="accent">done right the first time</span></h1>
+    <p class="lead">A family-run electrical contractor serving Hope Valley and the surrounding area — residential, commercial, and everything in between.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="tel:+14015397003">📞 Call or Text (401) 539-7003</a>
+      <a class="btn btn-ghost" href="#reviews">See our reviews</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>5.0★</strong><span>Google rating</span></div>
+      <div><strong>Family</strong><span>Owned & operated</span></div>
+      <div><strong>Res. + Comm.</strong><span>Full-service</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">What we do</span>
+      <h2>Full-service electrical work</h2>
+      <p>From a quick fix to a full new-construction install, we handle it.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-icon">🏠</div>
+        <h3>Residential Wiring</h3>
+        <p>Rewiring, outlets, lighting, and everyday electrical repairs for your home.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">🏢</div>
+        <h3>Commercial Electrical</h3>
+        <p>Electrical service and maintenance for local businesses and commercial properties.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">🧰</div>
+        <h3>New Construction</h3>
+        <p>Full electrical service installation for homes being built from the ground up.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">🔌</div>
+        <h3>Panel & Service Upgrades</h3>
+        <p>Modernize your electrical panel and service to safely handle today's power needs.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">🛠️</div>
+        <h3>Troubleshooting & Repairs</h3>
+        <p>Fast, accurate diagnosis for flickering lights, tripped breakers, and minor fixes.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">📋</div>
+        <h3>Pre-Sale Inspection Work</h3>
+        <p>Getting a home ready to sell? We knock out inspection-report electrical items fast.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Reviews</span>
+      <h2>What our customers say</h2>
+      <p>Real reviews from Google — this is the kind of work you can expect.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Have used the Murphys, father and son, for years. Responsive! Recently called to schedule a number of minor fixes. Brian on the job quickly. Dad called a few hours later in response to message left on answering machine — from FL while on vacation!"</p>
+        <div class="review-meta"><span>Google Review</span><span class="src">on Google</span></div>
+      </div>
+      <div class="review-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Best electrician I have dealt with in years. Smart, fast, efficient, came through when I needed someone to get work done in preparation for sale of house. Brian Murphy did the work — he came in, banged it out, sent me the bill quickly because I needed it for closing papers, and charged me a very fair price. They were going to dock us $1,250 for the job — Atkisson Electric did it for $464. Delighted. Can recommend them highly enough."</p>
+        <div class="review-meta"><span>Mark Cavanagh</span><span class="src">on Google</span></div>
+      </div>
+      <div class="review-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"We've utilized the Murphy's services both commercially & residentially; they are an absolute dream to work with! Timely, professional, courteous, affordable. I highly recommend them for any type of job."</p>
+        <div class="review-meta"><span>Dana Dimarco</span><span class="src">on Google</span></div>
+      </div>
+      <div class="review-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Atkisson Electric installed the electrical service in the home I was building. They were a pleasure to work with, gave some helpful advice, & aided me in finding solutions to challenging situations. I'm grateful for the great work they did on my home. Thank you!"</p>
+        <div class="review-meta"><span>Colin H.</span><span class="src">on Google</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <div class="about-badge">⚡</div>
+      <h2>A family business, built on trust</h2>
+      <p>Atkisson Electric is run by the Murphys, father and son — a team that shows up, does the job right, and charges a fair price for it.</p>
+      <p>Whether it's a same-day fix, a full service upgrade, or wiring a house from the ground up, you're dealing directly with the people doing the work.</p>
+    </div>
+    <div class="reveal">
+      <div class="svc-card" style="box-shadow:none;">
+        <h3>Why customers keep calling us back</h3>
+        <p style="margin-bottom:10px;">✓ Direct, responsive communication — even on vacation</p>
+        <p style="margin-bottom:10px;">✓ Fair, honest pricing — no inflated quotes</p>
+        <p style="margin-bottom:10px;">✓ Residential & commercial experience</p>
+        <p>✓ Fast turnaround on repairs and paperwork</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="cta-banner reveal">
+      <h2>Need an electrician? Just call.</h2>
+      <a class="phone-big" href="tel:+14015397003">
+        <span>📞</span> (401) 539-7003
+      </a>
+      <div class="cta-sub">978 Main St, Hope Valley, RI 02832</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-mark">A</span> Atkisson Electric</div>
+        <p>Family-owned residential & commercial electrical contractor serving Hope Valley, RI and the surrounding area.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="tel:+14015397003">📞 (401) 539-7003</a>
+        <p>📍 978 Main St<br>Hope Valley, RI 02832</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Atkisson Electric.</span>
+      <span>Call or text for a quote.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="call-bar">
+  <a href="tel:+14015397003">
+    <span class="ring">📞</span>
+    <span>Call or Text — (401) 539-7003</span>
+  </a>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
